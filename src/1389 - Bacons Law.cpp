@@ -22,7 +22,7 @@ int search(int a) {
         q.pop();
 
         for(int i=1; i<=n; i++) {
-            if(arr[x][i] == 1 && (visited[x] + 1 < visited[i] || visited[i] == -1)) {
+            if(arr[x][i] == 1 && visited[i] == -1) {
                 q.push(i);
                 visited[i] = visited[x] + 1;
             }
